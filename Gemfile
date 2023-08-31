@@ -72,3 +72,100 @@ group :test do
 end
 
 gem "letter_opener_web"
+source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby "3.1.2"
+
+gem "rails", "~> 7.0.4"
+gem "sprockets-rails"
+gem "sqlite3", "~> 1.4"
+gem "puma", "~> 5.0"
+gem "importmap-rails"
+gem "turbo-rails"
+gem "stimulus-rails"
+gem "jbuilder"
+gem "redis", "~> 4.0"
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "bootsnap", require: false
+gem "letter_opener_web"
+
+# Authentication and Authorization
+gem "devise"
+gem "pundit"
+
+# Front-end Frameworks
+gem "bootstrap"
+# gem "tailwindcss" # Uncomment if using Tailwind CSS
+
+# Database Management
+gem "factory_bot_rails"
+gem "faker"
+
+# Deployment and Server
+# gem "capistrano"
+# gem "heroku"
+
+# Background Jobs
+# gem "sidekiq"
+# gem "redis"
+
+# Testing
+# gem "rspec-rails"
+# gem "shoulda-matchers"
+# gem "database_cleaner"
+
+# APIs
+# gem "active_model_serializers"
+
+# Caching
+# gem "dalli"
+
+# Environment Variables
+# gem "dotenv-rails"
+
+group :development, :test do
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  # Authentication and Authorization (for testing)
+  gem "devise"
+
+  # Front-end Frameworks (for development)
+  gem "bootstrap"
+  # gem "tailwindcss" # Uncomment if using Tailwind CSS
+
+  # Database Management (for testing)
+  gem "factory_bot_rails"
+  gem "faker"
+
+  # Background Jobs (for testing)
+  # gem "sidekiq"
+  # gem "redis"
+
+  # Testing
+  # gem "rspec-rails"
+  # gem "shoulda-matchers"
+  # gem "database_cleaner"
+end
+
+group :development do
+  gem "web-console"
+
+  # Add speed badges
+  # gem "rack-mini-profiler"
+
+  # Speed up commands on slow machines / big apps
+  # gem "spring"
+end
+
+group :test do
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "webdrivers"
+
+  # Testing
+  # gem "rspec-rails"
+  # gem "shoulda-matchers"
+  # gem "database_cleaner"
+end
+
